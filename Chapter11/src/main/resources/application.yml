@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+logging:
+  file:
+    name: mylog.log
+    path: logs
+
+
+spring:
+  application:
+    name: myTest
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://****:3306/course?useSSL=false
+    username: course
+    password: course
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis:
+  type-aliases-package: com.siants.core.model
+  mapper-locations:
+    - mapper/*
